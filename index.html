@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Sites — It Works!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #e8e8e8;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 3rem;
+      max-width: 520px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, #f9d923, #ff9f43);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #a8dadc;
+      margin-bottom: 2rem;
+    }
+
+    .confetti {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: -20px;
+      animation: confetti-fall linear forwards;
+    }
+
+    .confetti-piece:nth-child(1) { left: 5%; background: #f9d923; animation-duration: 3s; animation-delay: 0s; }
+    .confetti-piece:nth-child(2) { left: 15%; background: #ff9f43; animation-duration: 3.5s; animation-delay: 0.2s; }
+    .confetti-piece:nth-child(3) { left: 25%; background: #a8dadc; animation-duration: 2.8s; animation-delay: 0.1s; }
+    .confetti-piece:nth-child(4) { left: 35%; background: #e63946; animation-duration: 3.2s; animation-delay: 0.4s; }
+    .confetti-piece:nth-child(5) { left: 45%; background: #f9d923; animation-duration: 2.6s; animation-delay: 0s; }
+    .confetti-piece:nth-child(6) { left: 55%; background: #2a9d8f; animation-duration: 3.4s; animation-delay: 0.3s; }
+    .confetti-piece:nth-child(7) { left: 65%; background: #ff9f43; animation-duration: 2.9s; animation-delay: 0.15s; }
+    .confetti-piece:nth-child(8) { left: 75%; background: #e63946; animation-duration: 3.1s; animation-delay: 0.25s; }
+    .confetti-piece:nth-child(9) { left: 85%; background: #a8dadc; animation-duration: 3.3s; animation-delay: 0.35s; }
+    .confetti-piece:nth-child(10) { left: 95%; background: #2a9d8f; animation-duration: 2.7s; animation-delay: 0.05s; }
+
+    @keyframes confetti-fall {
+      to {
+        transform: translateY(100vh) rotate(720deg);
+      }
+    }
+
+    .message {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #c9c9c9;
+    }
+
+    .message strong {
+      color: #f9d923;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Congratulations!</h1>
+    <p class="subtitle">Static sites is working</p>
+    <div class="confetti" aria-hidden="true">
+      <span class="confetti-piece"></span>
+      <span class="confetti-piece"></span>
+      <span class="confetti-piece"></span>
+      <span class="confetti-piece"></span>
+      <span class="confetti-piece"></span>
+      <span class="confetti-piece"></span>
+      <span class="confetti-piece"></span>
+      <span class="confetti-piece"></span>
+      <span class="confetti-piece"></span>
+      <span class="confetti-piece"></span>
+    </div>
+    <p class="message">
+      <strong>You did it!</strong> Your static site is up and running. No servers, no databases — just clean, fast HTML.
+    </p>
+  </div>
+</body>
+</html>
